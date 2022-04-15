@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarService {
-    List<Car> cars;
+    private List<Car> cars;
     {
         cars=new ArrayList<>();
         cars.add(new Car("BMW",8,3500000));
@@ -22,4 +22,5 @@ public class CarService {
         }
         return result;
     }
+
 }
