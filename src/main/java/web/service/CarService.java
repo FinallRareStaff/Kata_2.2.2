@@ -17,6 +17,11 @@ public class CarService {
         cars.add(new Car("Tesla",2,4500000));
         cars.add(new Car("Cadillac",5,9000000));
     }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
     public List<Car> getCars(int value) {
         List<Car> result = new ArrayList<>();
         for (int i = 0; i < value; i++) {

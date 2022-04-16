@@ -6,46 +6,58 @@
     <title>Cars</title>
 </head>
 <body>
-<table>
-    <tr>
-        <style>
-            th {
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 250%;
-            }
-            p {
-                font-family: Verdana, Arial, Helvetica, sans-serif;
-                font-size: 11pt;
-            }
-        </style>
-        <style>
-            td {
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 250%;
-            }
-            p {
-                font-family: Verdana, Arial, Helvetica, sans-serif;
-                font-size: 11pt;
-            }
-        </style>
-        <th style="background-color: yellow" >Model</th>
-        <th style="background-color: yellow" >Series</th>
-        <th style="background-color: yellow" >Price</th>
-    </tr>
-    <th:block th:each="car : ${cars}">
+<div>
+    <table>
         <tr>
-            <td style="background-color: silver" th:text="${car.getModel()}">...</td>
-            <td style="background-color: silver" th:text="${car.getSeries()}">...</td>
-            <td style="background-color: silver" th:text="${car.getPrice()}">...</td>
+            <style>
+                th {
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 250%;
+                }
+
+                p {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size: 11pt;
+                }
+            </style>
+            <style>
+                td {
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: 250%;
+                }
+
+                p {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size: 11pt;
+                }
+            </style>
+            <th style="background-color: yellow">Model</th>
+            <th style="background-color: yellow">Series</th>
+            <th style="background-color: yellow">Price</th>
         </tr>
-    </th:block>
-</table>
-<style>
-    a {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 150%;
-    }
-</style>
-<a href = "/">Nelson Bighetti quote</a>
+        <th:block th:each="car : ${cars}">
+            <tr>
+                <td style="background-color: silver" th:text="${car.getModel()}">...</td>
+                <td style="background-color: silver" th:text="${car.getSeries()}">...</td>
+                <td style="background-color: silver" th:text="${car.getPrice()}">...</td>
+            </tr>
+        </th:block>
+    </table>
+</div>
+<div>
+    <style>
+        a {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 150%;
+        }
+    </style>
+    <a href="/">Nelson Bighetti quote</a>
+    <li><a href="/cars?count=1">View cars count = 1</a></li>
+    <li><a href="/cars?count=2">View cars count = 2</a></li>
+    <li><a href="/cars?count=3">View cars count = 3</a></li>
+    <li><a href="/cars?count=4">View cars count = 4</a></li>
+    <li><a href="/cars?count=5">View cars count = 5</a></li>
+    <li><a href="/cars?count=644">View cars count = 644</a></li>
+</div>
 </body>
 </html>
