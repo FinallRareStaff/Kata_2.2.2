@@ -8,17 +8,44 @@
 <body>
 <table>
     <tr>
-        <td style="background-color: yellow" >Model</th>
-        <td style="background-color: yellow" >Series</th>
-        <td style="background-color: yellow" >Price</th>
+        <style>
+            th {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 250%;
+            }
+            p {
+                font-family: Verdana, Arial, Helvetica, sans-serif;
+                font-size: 11pt;
+            }
+        </style>
+        <style>
+            td {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 250%;
+            }
+            p {
+                font-family: Verdana, Arial, Helvetica, sans-serif;
+                font-size: 11pt;
+            }
+        </style>
+        <th style="background-color: yellow" >Model</th>
+        <th style="background-color: yellow" >Series</th>
+        <th style="background-color: yellow" >Price</th>
     </tr>
     <th:block th:each="car : ${cars}">
         <tr>
-            <td style="background-color: silver" th:text="${car.getModel()}"></td>
-            <td style="background-color: silver" th:text="${car.getSeries()}"></td>
-            <td style="background-color: silver" th:text="${car.getPrice()}"></td>
+            <td style="background-color: silver" th:text="${car.getModel()}">...</td>
+            <td style="background-color: silver" th:text="${car.getSeries()}">...</td>
+            <td style="background-color: silver" th:text="${car.getPrice()}">...</td>
         </tr>
     </th:block>
 </table>
+<style>
+    a {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 150%;
+    }
+</style>
+<a href = "/">Nelson Bighetti quote</a>
 </body>
 </html>
